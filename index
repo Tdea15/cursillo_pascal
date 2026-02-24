@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursillo Pascal | Ingreso Asegurado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --azul-pascal: #0076BE;
+            --celeste-pascal: #00AEEF;
+        }
+        .bg-pascal { background-color: var(--azul-pascal); }
+        .text-pascal { color: var(--azul-pascal); }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+        .gradient-blue { background: linear-gradient(135deg, var(--azul-pascal), var(--celeste-pascal)); }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://i.ibb.co/Lz0VzXh/logo-pascal.png" alt="Logo" class="h-12"> 
+                <span class="text-2xl font-bold text-pascal">PASCAL</span>
+            </div>
+            <div class="hidden md:flex space-x-6 font-semibold text-gray-700">
+                <a href="#cursos" class="hover:text-pascal">Cursos</a>
+                <a href="#sedes" class="hover:text-pascal">Sedes</a>
+                <a href="https://wa.me/595983376741" class="bg-pascal text-white px-4 py-2 rounded-full hover:bg-blue-700">Inscribirme</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="gradient-blue text-white py-16 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Tu ingreso a la universidad empieza acá.</h1>
+                <p class="text-lg mb-8 opacity-90">Materiales incluidos, evaluaciones semanales y simulacros reales. ¡Inscripciones abiertas para el ciclo 2025-2026!</p>
+                <div class="flex space-x-4">
+                    <a href="https://wa.me/595983376741" class="bg-white text-pascal font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition">Ver Info WhatsApp</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://i.ibb.co/mS6vPj9/ingreso-foto.png" alt="Estudiantes Pascal" class="rounded-2xl shadow-2xl border-4 border-white/20">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-6 border rounded-xl hover:shadow-xl transition">
+                <i class="fas fa-book-open text-4xl text-pascal mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">Materiales Incluidos</h3>
+                <p class="text-gray-600">Libros y ejercitarios actualizados según cada facultad.</p>
+            </div>
+            <div class="p-6 border rounded-xl hover:shadow-xl transition">
+                <i class="fas fa-chart-line text-4xl text-pascal mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">Evaluaciones Semanales</h3>
+                <p class="text-gray-600">Medimos tu progreso real semana a semana.</p>
+            </div>
+            <div class="p-6 border rounded-xl hover:shadow-xl transition">
+                <i class="fas fa-user-graduate text-4xl text-pascal mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">Simulacros de Exámenes</h3>
+                <p class="text-gray-600">Viví la experiencia del examen real antes del gran día.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cursos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-pascal mb-12">Nuestros Cursos de Ingreso</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow hover-scale text-center border-b-4 border-pascal">
+                    <span class="font-black text-2xl block">FIUNA</span>
+                    <p class="text-xs text-gray-500 uppercase mt-2 font-bold tracking-widest">Ingeniería UNA</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow hover-scale text-center border-b-4 border-pascal">
+                    <span class="font-black text-2xl block text-blue-500">FPUNA</span>
+                    <p class="text-xs text-gray-500 uppercase mt-2 font-bold tracking-widest">Politécnica</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow hover-scale text-center border-b-4 border-pascal">
+                    <span class="font-black text-2xl block text-green-600">FCQ</span>
+                    <p class="text-xs text-gray-500 uppercase mt-2 font-bold tracking-widest">Químicas</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow hover-scale text-center border-b-4 border-pascal">
+                    <span class="font-black text-2xl block text-red-600">MEDICINA</span>
+                    <p class="text-xs text-gray-500 uppercase mt-2 font-bold tracking-widest">UCA / UNA</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow hover-scale text-center border-b-4 border-pascal">
+                    <span class="font-black text-2xl block">CTN / IPT</span>
+                    <p class="text-xs text-gray-500 uppercase mt-2 font-bold tracking-widest">Colegios Técnicos</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow hover-scale text-center border-b-4 border-pascal">
+                    <span class="font-black text-2xl block">FACEN</span>
+                    <p class="text-xs text-gray-500 uppercase mt-2 font-bold tracking-widest">Exactas UNA</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow hover-scale text-center border-b-4 border-pascal">
+                    <span class="font-black text-2xl block text-yellow-600">ITAIPU</span>
+                    <p class="text-xs text-gray-500 uppercase mt-2 font-bold tracking-widest">Becas de Grado</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow hover-scale text-center border-b-4 border-pascal">
+                    <span class="font-black text-2xl block">ING. UCA</span>
+                    <p class="text-xs text-gray-500 uppercase mt-2 font-bold tracking-widest">Católica</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sedes" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-pascal mb-8">Nuestras Sucursales</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-8">
+                <div class="bg-gray-100 p-8 rounded-2xl w-full md:w-80">
+                    <i class="fas fa-map-marker-alt text-3xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">San Lorenzo</h3>
+                    <p class="text-gray-600">A pasos de la entrada principal de la UNA.</p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-2xl w-full md:w-80">
+                    <i class="fas fa-map-marker-alt text-3xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Asunción</h3>
+                    <p class="text-gray-600">Zona céntrica, accesible desde todos los puntos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 px-4 text-center">
+        <img src="https://i.ibb.co/Lz0VzXh/logo-pascal.png" alt="Logo" class="h-16 mx-auto mb-6 brightness-200">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://instagram.com/cursillopascal" class="text-2xl hover:text-celeste-pascal transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-2xl hover:text-celeste-pascal transition"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/595983376741" class="text-2xl hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="opacity-50 text-sm">&copy; 2026 Cursillo Pascal. Desarrollado por NovaTec Engineering.</p>
+    </footer>
+
+    <a href="https://wa.me/595983376741" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Animaciones suaves para el scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
