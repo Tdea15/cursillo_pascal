@@ -3,240 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursillo Pascal | Excelencia en Ingresos Universitarios</title>
+    <title>Cursillo Pascal | Liderazgo en Ingresos UNA y UCA</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, .font-heading { font-family: 'Poppins', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .font-heading { font-family: 'Outfit', sans-serif; }
         
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        .custom-gradient {
+            background: linear-gradient(135deg, #002D52 0%, #005691 100%);
         }
 
-        .hero-pattern {
-            background-color: #004a8c;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        .tab-content { display: none; opacity: 0; transform: translateY(10px); transition: all 0.3s ease; }
+        .tab-content.active { display: block; opacity: 1; transform: translateY(0); }
+
+        .active-tab {
+            color: #005691;
+            border-bottom: 3px solid #005691;
+            background: rgba(0, 86, 145, 0.05);
         }
 
-        .course-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .course-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-        }
-
-        .tab-content { display: none; }
-        .tab-content.active { display: block; animation: fadeIn 0.5s ease; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .card-pattern {
+            background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+            background-size: 12px 12px;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-[#F8FAFC]">
 
-    <nav class="glass-nav fixed w-full z-50">
+    <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-3">
-                    <img src="logo.png" alt="Pascal" class="h-12 w-auto">
-                    <div class="leading-none">
-                        <span class="text-2xl font-black text-[#004a8c] tracking-tighter">PASCAL</span>
-                        <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-sky-500">Cursillos de Ingreso</p>
+                <div class="flex items-center gap-4">
+                    <img src="logo.png" alt="Pascal" class="h-14">
+                    <div class="hidden sm:block border-l pl-4 border-slate-200">
+                        <span class="block text-xl font-extrabold text-[#002D52] tracking-tighter">PASCAL</span>
+                        <span class="block text-[10px] font-bold text-sky-600 uppercase tracking-widest">Ingresos Universitarios</span>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
-                    <a href="#metodo" class="hover:text-[#004a8c] transition">Método</a>
-                    <a href="#oferta" class="hover:text-[#004a8c] transition">Carreras</a>
-                    <a href="#sedes" class="hover:text-[#004a8c] transition">Sucursales</a>
-                    <a href="https://wa.me/595983376741" class="bg-[#004a8c] text-white px-6 py-3 rounded-xl shadow-lg shadow-blue-900/20 hover:bg-blue-800 transition">Inscribirme Ahora</a>
+                <div class="flex items-center gap-6">
+                    <a href="#sedes" class="hidden md:block text-sm font-bold text-slate-600 hover:text-[#002D52]">Sucursales</a>
+                    <a href="https://wa.me/595983376741" class="bg-[#002D52] text-white px-6 py-3 rounded-full font-bold text-sm shadow-xl hover:bg-sky-900 transition-all flex items-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Inscribirme
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section class="hero-pattern pt-32 pb-20 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-            <div class="lg:w-3/5 text-white">
-                <span class="inline-block bg-sky-400/20 text-sky-300 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Convocatoria Ciclo 2026 Abierta</span>
-                <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-[1.1]">No solo estudiás, <span class="text-sky-400">asegurás tu ingreso.</span></h1>
-                <p class="text-lg text-blue-100 mb-10 max-w-2xl leading-relaxed">Más de 15 años liderando ingresos en FIUNA, Medicina y Politécnica. Sistema de alto rendimiento con simulacros semanales y materiales de autoría propia.</p>
-                
-                <div class="flex flex-wrap gap-4">
-                    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
-                        <div class="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center text-xl">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold">92%</p>
-                            <p class="text-xs text-blue-200">Tasa de Ingreso</p>
-                        </div>
+    <header class="pt-32 pb-20 custom-gradient relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16 relative z-10">
+            <div class="lg:w-1/2 text-white">
+                <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
+                    Tu ingreso a la <span class="text-sky-400">UNA</span> no es una opción, es una meta.
+                </h1>
+                <p class="text-lg text-blue-100/80 mb-8 max-w-xl">
+                    Metodología de alto rendimiento diseñada para las facultades más exigentes del país. Materiales actualizados 2026 y simulacros de examen real.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/20">
+                        <span class="block text-3xl font-black text-sky-400">15+</span>
+                        <span class="text-xs uppercase font-bold opacity-70">Años de Trayectoria</span>
                     </div>
-                    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
-                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-bold">+5000</p>
-                            <p class="text-xs text-blue-200">Egresados</p>
-                        </div>
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/20">
+                        <span class="block text-3xl font-black text-sky-400">9/10</span>
+                        <span class="text-xs uppercase font-bold opacity-70">Alumnos Ingresantes</span>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-2/5 relative">
-                <div class="absolute -inset-4 bg-sky-500/30 blur-3xl rounded-full"></div>
-                <img src="hero.png" alt="Pascal Alumnos" class="relative rounded-3xl shadow-2xl border-8 border-white/10 object-cover w-full h-[500px]">
+            <div class="lg:w-1/2">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-sky-500/20 blur-2xl rounded-full"></div>
+                    <img src="hero.png" alt="Cursillo Pascal" class="relative rounded-[2rem] shadow-2xl border-4 border-white/10 w-full h-[450px] object-cover">
+                </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <section id="oferta" class="py-24 px-4 bg-white">
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <h2 class="text-4xl font-bold text-slate-900 mb-4">Elegí tu camino al éxito</h2>
-            <p class="text-slate-500">Programas diseñados según la malla específica de cada facultad.</p>
-        </div>
-
-        <div class="max-w-5xl mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                <button onclick="openTab(event, 'ingenieria')" class="tab-btn active border-b-4 border-[#004a8c] py-4 font-bold text-[#004a8c]">INGENIERÍAS</button>
-                <button onclick="openTab(event, 'salud')" class="tab-btn border-b-4 border-transparent py-4 font-bold text-slate-400 hover:text-slate-600 transition">SALUD</button>
-                <button onclick="openTab(event, 'tecnicos')" class="tab-btn border-b-4 border-transparent py-4 font-bold text-slate-400 hover:text-slate-600 transition">TÉCNICOS</button>
-                <button onclick="openTab(event, 'becas')" class="tab-btn border-b-4 border-transparent py-4 font-bold text-slate-400 hover:text-slate-600 transition">BECAS</button>
+    <section class="py-24 px-4 bg-white card-pattern">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-[#002D52] mb-4">Programas de Estudio Especializados</h2>
+                <p class="text-slate-500">Seleccioná tu facultad para ver los detalles de preparación.</p>
             </div>
 
-            <div id="ingenieria" class="tab-content active grid md:grid-cols-3 gap-6">
-                <div class="course-card p-8 bg-slate-50 rounded-3xl border border-slate-100">
-                    <span class="text-xs font-black text-sky-600 tracking-widest uppercase">UNA</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-4">FIUNA</h3>
-                    <p class="text-sm text-slate-600 mb-6">Preparación intensiva en Cálculo, Física y Geometría.</p>
-                    <ul class="text-xs space-y-2 mb-8 text-slate-500">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Simulacros examen real</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Tutorías nocturnas</li>
-                    </ul>
-                    <a href="#" class="text-[#004a8c] font-bold text-sm flex items-center gap-2">Ver programa completo <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="course-card p-8 bg-slate-50 rounded-3xl border border-slate-100">
-                    <span class="text-xs font-black text-sky-600 tracking-widest uppercase">UNA</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-4">FPUNA</h3>
-                    <p class="text-sm text-slate-600 mb-6">Enfoque en Lógica Matemática y Aritmética avanzada.</p>
-                    <a href="#" class="text-[#004a8c] font-bold text-sm flex items-center gap-2">Ver programa completo <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="course-card p-8 bg-slate-50 rounded-3xl border border-slate-100">
-                    <span class="text-xs font-black text-sky-600 tracking-widest uppercase">UCA</span>
-                    <h3 class="text-2xl font-bold mt-2 mb-4">ING. UCA</h3>
-                    <p class="text-sm text-slate-600 mb-6">Módulos adaptados a la malla de la Católica.</p>
-                    <a href="#" class="text-[#004a8c] font-bold text-sm flex items-center gap-2">Ver programa completo <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <div class="flex flex-wrap justify-center gap-2 mb-12 bg-slate-100 p-2 rounded-2xl max-w-4xl mx-auto">
+                <button onclick="switchTab(this, 'tab-una')" class="tab-btn active-tab px-6 py-3 rounded-xl font-bold text-sm transition-all">INGENIERÍA (UNA/UCA)</button>
+                <button onclick="switchTab(this, 'tab-salud')" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm text-slate-500 transition-all">CIENCIAS DE LA SALUD</button>
+                <button onclick="switchTab(this, 'tab-tecnicos')" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm text-slate-500 transition-all">COLEGIOS TÉCNICOS</button>
+                <button onclick="switchTab(this, 'tab-becas')" class="tab-btn px-6 py-3 rounded-xl font-bold text-sm text-slate-500 transition-all">BECAS ITAIPÚ</button>
             </div>
 
-            <div id="salud" class="tab-content text-center py-10">
-                <h3 class="text-2xl font-bold">Medicina UNA / UCA</h3>
-                <p class="text-slate-500 mt-4">Biología, Química y Castellano con los mejores especialistas.</p>
-            </div>
-            <div id="tecnicos" class="tab-content text-center py-10">
-                <h3 class="text-2xl font-bold">CTN e IPT</h3>
-                <p class="text-slate-500 mt-4">Nivelación para el ingreso a los colegios técnicos más exigentes.</p>
-            </div>
-            <div id="becas" class="tab-content text-center py-10">
-                <h3 class="text-2xl font-bold">Becas ITAIPU</h3>
-                <p class="text-slate-500 mt-4">Preparación relámpago enfocada en los ejes temáticos de la convocatoria.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="sedes" class="py-24 bg-slate-900 text-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold mb-8 italic text-sky-400">¿Dónde estamos?</h2>
-                    <div class="space-y-8">
-                        <div class="flex gap-6 group">
-                            <div class="w-16 h-16 shrink-0 bg-[#004a8c] rounded-2xl flex items-center justify-center text-2xl group-hover:bg-sky-500 transition">
-                                <i class="fas fa-map-marked-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-2">San Lorenzo</h4>
-                                <p class="text-slate-400">Frente a la entrada principal de la UNA. <br> Avda. Mariscal López c/ Ciencias Químicas.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 group">
-                            <div class="w-16 h-16 shrink-0 bg-slate-800 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-sky-500 transition border border-slate-700">
-                                <i class="fas fa-city"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-2">Asunción</h4>
-                                <p class="text-slate-400">Ubicación céntrica estratégica para todos los buses. <br> Calle Azara casi Tacuary.</p>
-                            </div>
-                        </div>
+            <div id="tab-una" class="tab-content active">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm hover:border-[#002D52] transition-colors">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-[#002D52] mb-6 font-bold">UNA</div>
+                        <h3 class="text-2xl font-black mb-2">FIUNA</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">Enfoque intensivo en Cálculo, Geometría Analítica y Física. Simulacros calcados a los de la facultad.</p>
+                        <ul class="space-y-3 text-xs font-bold text-slate-500">
+                            <li><i class="fas fa-check-circle text-sky-500 mr-2"></i>Álgebra y Aritmética</li>
+                            <li><i class="fas fa-check-circle text-sky-500 mr-2"></i>Física I y II</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm hover:border-[#002D52] transition-colors">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-[#002D52] mb-6 font-bold">UNA</div>
+                        <h3 class="text-2xl font-black mb-2">FPUNA / FACEN</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">Preparación para Politécnica y Exactas. Lógica, Matemática y Castellano.</p>
+                        <ul class="space-y-3 text-xs font-bold text-slate-500">
+                            <li><i class="fas fa-check-circle text-sky-500 mr-2"></i>Razonamiento Lógico</li>
+                            <li><i class="fas fa-check-circle text-sky-500 mr-2"></i>Geometría Descriptiva</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm hover:border-[#002D52] transition-colors">
+                        <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center text-sky-700 mb-6 font-bold">UCA</div>
+                        <h3 class="text-2xl font-black mb-2">INGENIERÍA UCA</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">Módulos específicos para el ingreso a la Universidad Católica Nuestra Señora de la Asunción.</p>
                     </div>
                 </div>
-                <div class="bg-white/5 p-4 rounded-[40px] border border-white/10">
-                    <div class="bg-slate-800 h-80 rounded-[30px] flex items-center justify-center text-slate-500 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1523050853063-bd80e29247c3?auto=format&fit=crop&q=80&w=1000" alt="Aula Pascal" class="w-full h-full object-cover opacity-50">
+            </div>
+
+            <div id="tab-salud" class="tab-content">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200">
+                        <h3 class="text-2xl font-black mb-4">Medicina (UNA / UCA)</h3>
+                        <p class="text-slate-600 text-sm mb-6">Biología Celular, Química Orgánica e Inorgánica, Castellano y Anatomía descriptiva.</p>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 text-xs font-bold">Turnos: Mañana / Tarde / Noche</div>
                     </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200">
+                        <h3 class="text-2xl font-black mb-4">FCQ - Químicas</h3>
+                        <p class="text-slate-600 text-sm mb-6">Especialización para Ciencias Químicas, Farmacia e Ingeniería Química.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-tecnicos" class="tab-content">
+                <div class="max-w-3xl mx-auto p-8 bg-blue-50 rounded-3xl border-2 border-dashed border-blue-200 text-center">
+                    <h3 class="text-3xl font-black text-[#002D52] mb-4 text-center">Colegios Técnicos: CTN e IPT</h3>
+                    <p class="text-slate-600 mb-8">Nivelación para el 9no grado y cursillo de ingreso para especialidades de Construcciones, Electrónica, Mecánica y más.</p>
+                    <div class="grid grid-cols-2 gap-4 text-sm font-bold">
+                        <div class="bg-white p-4 rounded-xl shadow-sm italic">"El mejor semillero para la FIUNA"</div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm italic">"Ingreso asegurado al CTN"</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-becas" class="tab-content">
+                <div class="bg-[#002D52] text-white p-12 rounded-[3rem] text-center">
+                    <span class="bg-sky-500 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase mb-6 inline-block">Exclusivo</span>
+                    <h3 class="text-4xl font-black mb-6">Preparación Becas ITAIPÚ</h3>
+                    <p class="text-blue-200 max-w-2xl mx-auto mb-8 leading-relaxed text-lg">
+                        Módulos intensivos de Matemáticas y Castellano basados en los ejes temáticos oficiales de la última convocatoria. Evaluaciones diarias bajo presión de tiempo.
+                    </p>
+                    <a href="https://wa.me/595983376741" class="inline-block bg-white text-[#002D52] px-10 py-4 rounded-full font-black hover:bg-sky-100 transition shadow-2xl">Consultar Próximo Inicio</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white pt-20 pb-10 border-t">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12 mb-16">
-            <div class="col-span-2">
-                <img src="logo.png" alt="Pascal" class="h-16 mb-6">
-                <p class="text-slate-500 max-w-sm">Formando a los futuros profesionales de Paraguay con rigor académico y valores. Pascal no es solo un cursillo, es tu primer paso en la universidad.</p>
-            </div>
-            <div>
-                <h5 class="font-bold mb-6">Enlaces Rápidos</h5>
-                <ul class="space-y-4 text-sm text-slate-600 font-medium">
-                    <li><a href="#" class="hover:text-pascal transition">Cronograma de Exámenes</a></li>
-                    <li><a href="#" class="hover:text-pascal transition">Galería de Ingresantes</a></li>
-                    <li><a href="#" class="hover:text-pascal transition">Recursos Gratuitos</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="font-bold mb-6">Contacto Directo</h5>
-                <p class="text-sm text-slate-600 mb-2">consultas@cursillopascal.edu.py</p>
-                <p class="text-xl font-black text-[#004a8c]">+595 983 376 741</p>
+    <section id="sedes" class="py-24 bg-slate-50 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black text-[#002D52] mb-12 text-center">Donde el esfuerzo se hace hábito</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+                    <i class="fas fa-map-pin text-3xl text-red-500 mb-6"></i>
+                    <h4 class="text-2xl font-black mb-2 text-[#002D52]">Sede San Lorenzo</h4>
+                    <p class="text-slate-500 font-medium mb-4 italic">"Frente mismo a la entrada de la UNA"</p>
+                    <p class="text-sm text-slate-600 mb-8">Avda. Mariscal López c/ Ciencias Químicas. Punto estratégico para alumnos que buscan optimizar su tiempo.</p>
+                    <button class="w-full py-4 border-2 border-slate-100 rounded-2xl font-bold hover:bg-slate-50 transition">Ver Ubicación en Maps</button>
+                </div>
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+                    <i class="fas fa-city text-3xl text-[#002D52] mb-6"></i>
+                    <h4 class="text-2xl font-black mb-2 text-[#002D52]">Sede Asunción</h4>
+                    <p class="text-slate-500 font-medium mb-4">Centro Estratégico</p>
+                    <p class="text-sm text-slate-600 mb-8">Calle Azara casi Tacuary. Accesible desde todos los puntos de la ciudad y Gran Asunción.</p>
+                    <button class="w-full py-4 border-2 border-slate-100 rounded-2xl font-bold hover:bg-slate-50 transition">Ver Ubicación en Maps</button>
+                </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 pt-10 border-t flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-xs text-slate-400">© 2026 Cursillo Pascal. Todos los derechos reservados.</p>
-            <div class="flex items-center gap-4">
-                <span class="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Powered by</span>
-                <span class="font-black text-slate-400 tracking-tighter">NOVATEC ENGINEERING</span>
+    </section>
+
+    <footer class="bg-white pt-20 pb-12 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <img src="logo.png" alt="Pascal" class="h-16 mx-auto md:mx-0 mb-4 opacity-80 grayscale hover:grayscale-0 transition">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Cursillo Pascal S.A. | RUC: 800XXXXX-X</p>
             </div>
+            <div class="flex items-center gap-4 bg-slate-50 p-6 rounded-[2rem] border border-slate-100">
+                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Tecnología por</span>
+                <div class="bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-black tracking-tighter shadow-lg shadow-slate-900/20">
+                    NOVATEC ENGINEERING
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <p class="text-[10px] text-slate-400 font-bold uppercase">Paraguay 2026 - Derechos Reservados</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/595983376741" class="fixed bottom-8 right-8 group z-50">
-        <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-xl shadow-xl text-sm font-bold text-slate-800 opacity-0 group-hover:opacity-100 transition whitespace-nowrap">¿Hablamos por WhatsApp?</span>
-        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl shadow-green-500/40 hover:scale-110 transition">
+    <a href="https://wa.me/595983376741" class="fixed bottom-10 right-10 z-50 flex items-center gap-3 bg-[#25D366] text-white p-4 pr-6 rounded-full shadow-2xl hover:scale-105 transition active:scale-95 group">
+        <div class="bg-white text-[#25D366] w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-inner">
             <i class="fab fa-whatsapp"></i>
         </div>
+        <span class="font-bold text-sm">Consultas Inscripción</span>
     </a>
 
     <script>
-        function openTab(evt, tabName) {
-            let i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active", "border-[#004a8c]", "text-[#004a8c]");
-                tablinks[i].classList.add("border-transparent", "text-slate-400");
-            }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active", "border-[#004a8c]", "text-[#004a8c]");
-            evt.currentTarget.classList.remove("border-transparent", "text-slate-400");
+        function switchTab(btn, tabId) {
+            // Remover clases de todos los botones
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('active-tab');
+                b.classList.add('text-slate-500');
+            });
+            
+            // Ocultar todos los contenidos
+            document.querySelectorAll('.tab-content').forEach(c => {
+                c.classList.remove('active');
+            });
+
+            // Activar actual
+            btn.classList.add('active-tab');
+            btn.classList.remove('text-slate-500');
+            document.getElementById(tabId).classList.add('active');
         }
     </script>
 </body>
