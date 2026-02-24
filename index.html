@@ -80,28 +80,33 @@
             <h2 class="text-3xl font-extrabold text-[#003366] mb-12 section-title uppercase text-center md:text-left">Programas por Facultad</h2>
             
             <div class="flex flex-wrap gap-4 md:gap-10 border-b border-slate-200 mb-10 overflow-x-auto">
-                <button onclick="openTab(event, 'una')" class="tab-btn active-tab pb-4 text-xs font-bold uppercase tracking-widest whitespace-nowrap">UNA (Ingeniería / Exactas)</button>
+                <button onclick="openTab(event, 'una')" class="tab-btn active-tab pb-4 text-xs font-bold uppercase tracking-widest whitespace-nowrap">UNA (Ingeniería / Exactas / Químicas)</button>
                 <button onclick="openTab(event, 'uca')" class="tab-btn pb-4 text-xs font-bold uppercase tracking-widest text-slate-400 whitespace-nowrap">UCA (Medicina / Ing.)</button>
                 <button onclick="openTab(event, 'tecnicos')" class="tab-btn pb-4 text-xs font-bold uppercase tracking-widest text-slate-400 whitespace-nowrap">Colegios Técnicos</button>
                 <button onclick="openTab(event, 'itaipu')" class="tab-btn pb-4 text-xs font-bold uppercase tracking-widest text-slate-400 whitespace-nowrap">Becas Itaipú</button>
             </div>
 
             <div id="una" class="tab-content active">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white p-8 border border-slate-200 rounded shadow-sm">
-                        <h4 class="font-black text-xl mb-3 text-[#003366]">FIUNA</h4>
-                        <p class="text-sm text-slate-600 mb-4">Preparación para Ingeniería UNA. Énfasis en Cálculo, Geometría Analítica y Física.</p>
-                        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter border-t pt-4">Contenido específico 2026</div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white p-6 border border-slate-200 rounded shadow-sm">
+                        <h4 class="font-black text-lg mb-2 text-[#003366]">FIUNA</h4>
+                        <p class="text-xs text-slate-600 mb-4 font-medium italic">Facultad de Ingeniería</p>
+                        <p class="text-sm text-slate-500">Énfasis en Cálculo, Geometría Analítica y Física.</p>
                     </div>
-                    <div class="bg-white p-8 border border-slate-200 rounded shadow-sm">
-                        <h4 class="font-black text-xl mb-3 text-[#003366]">FPUNA / FACEN</h4>
-                        <p class="text-sm text-slate-600 mb-4">Módulos para Politécnica y Ciencias Exactas. Razonamiento Lógico y Matemática.</p>
-                        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter border-t pt-4">Contenido específico 2026</div>
+                    <div class="bg-white p-6 border border-slate-200 rounded shadow-sm">
+                        <h4 class="font-black text-lg mb-2 text-[#003366]">FPUNA</h4>
+                        <p class="text-xs text-slate-600 mb-4 font-medium italic">Facultad Politécnica</p>
+                        <p class="text-sm text-slate-500">Preparación enfocada en Aritmética, Álgebra y Lógica.</p>
                     </div>
-                    <div class="bg-white p-8 border border-slate-200 rounded shadow-sm">
-                        <h4 class="font-black text-xl mb-3 text-[#003366]">FCQ</h4>
-                        <p class="text-sm text-slate-600 mb-4">Preparación para la Facultad de Ciencias Químicas y carreras afines.</p>
-                        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter border-t pt-4">Contenido específico 2026</div>
+                    <div class="bg-white p-6 border border-slate-200 rounded shadow-sm">
+                        <h4 class="font-black text-lg mb-2 text-[#003366]">FACEN</h4>
+                        <p class="text-xs text-slate-600 mb-4 font-medium italic">Cs. Exactas y Naturales</p>
+                        <p class="text-sm text-slate-500">Módulos especializados según la carrera de ingreso.</p>
+                    </div>
+                    <div class="bg-white p-6 border border-slate-200 rounded shadow-sm">
+                        <h4 class="font-black text-lg mb-2 text-[#003366]">FCQ</h4>
+                        <p class="text-xs text-slate-600 mb-4 font-medium italic">Cs. Químicas</p>
+                        <p class="text-sm text-slate-500">Preparación para el ingreso a la Facultad de Ciencias Químicas.</p>
                     </div>
                 </div>
             </div>
@@ -190,19 +195,15 @@
         </div>
     </section>
 
-    <footer class="py-16 bg-white border-t border-slate-100">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex items-center gap-3 grayscale opacity-50">
-                <img src="logo.png" alt="Logo" class="h-8">
-                <span class="text-sm font-bold tracking-tighter">CURSILLO PASCAL</span>
+    <footer class="py-16 bg-white border-t border-slate-100 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-center gap-6 text-slate-400 mb-8">
+                <a href="#" class="hover:text-[#003366]"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-[#003366]"><i class="fab fa-facebook text-2xl"></i></a>
             </div>
-            <p class="text-[10px] text-slate-400 font-bold tracking-widest uppercase text-center">
+            <p class="text-[10px] text-slate-400 font-bold tracking-widest uppercase">
                 © 2026 Cursillo Pascal • Información Académica • Paraguay
             </p>
-            <div class="flex gap-6 text-slate-400">
-                <a href="#" class="hover:text-[#003366]"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-[#003366]"><i class="fab fa-facebook"></i></a>
-            </div>
         </div>
     </footer>
 
