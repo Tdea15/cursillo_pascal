@@ -1,129 +1,212 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursillo Pascal | Información Académica</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; color: #1e293b; }
         .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        .active-tab {
-            border-bottom: 2px solid #003366;
-            color: #003366;
-            font-weight: 700;
-        }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease; }
+        .active-tab { border-bottom: 3px solid #003366; color: #003366; font-weight: 800; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .section-title { position: relative; padding-bottom: 12px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: #003366; }
     </style>
 </head>
-<body class="bg-white text-slate-800">
+<body class="bg-white">
 
-    <nav class="border-b border-slate-100 py-4">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 py-4">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="logo.png" alt="Logo Pascal" class="h-12">
-                <span class="text-xl font-bold tracking-tight text-[#003366]">CURSILLO PASCAL</span>
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Logo" class="h-10">
+                <span class="text-lg font-extrabold tracking-tighter text-[#003366]">PASCAL</span>
             </div>
-            <a href="https://wa.me/595983376741" class="text-sm font-bold border-2 border-[#003366] text-[#003366] px-5 py-2 rounded hover:bg-[#003366] hover:text-white transition">
-                CONTACTAR
+            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <a href="#programas" class="hover:text-[#003366]">Programas</a>
+                <a href="#metodo" class="hover:text-[#003366]">Metodología</a>
+                <a href="#sedes" class="hover:text-[#003366]">Sedes</a>
+            </div>
+            <a href="https://wa.me/595983376741" class="bg-[#003366] text-white px-6 py-2 rounded text-xs font-bold hover:bg-blue-900 transition shadow-lg shadow-blue-900/20">
+                CONSULTAR
             </a>
         </div>
     </nav>
 
-    <header class="py-16 bg-slate-50 border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <h1 class="text-4xl font-extrabold text-[#003366] mb-4 uppercase">Preparación para Ingresos Universitarios</h1>
-                <p class="text-lg text-slate-600 mb-6">Larga trayectoria en la formación de postulantes para las principales facultades del país.</p>
-                <div class="inline-block bg-slate-200 px-4 py-2 rounded text-xs font-bold text-slate-700 uppercase">Ciclo 2026</div>
-            </div>
-            <div class="md:w-1/2">
-                <img src="hero.png" alt="Institución" class="rounded shadow-lg w-full h-64 object-cover border border-slate-200">
+    <header class="relative bg-slate-900 py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="hero.png" alt="Background" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-6xl mx-auto px-4 relative z-10 text-white">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-black mb-6 leading-tight uppercase">Preparación Técnica para Ingresos Universitarios</h1>
+                <p class="text-xl text-slate-300 mb-8 leading-relaxed">Formación académica orientada a resultados en las facultades más exigentes del Paraguay. Contenidos actualizados y seguimiento por asignatura.</p>
+                <div class="flex gap-4">
+                    <span class="border border-white/30 px-4 py-2 rounded text-xs font-bold uppercase tracking-widest">Ciclo Académico 2026</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="py-16">
+    <section id="metodo" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-8 text-[#003366]">PROGRAMAS DE ESTUDIO</h2>
+            <h2 class="text-3xl font-extrabold text-[#003366] mb-12 section-title uppercase">Metodología de Preparación</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="space-y-4">
+                    <div class="text-[#003366] text-3xl"><i class="fas fa-file-invoice"></i></div>
+                    <h3 class="font-bold text-lg uppercase tracking-tight">Materiales de Estudio</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Ejercitarios y materiales teóricos desarrollados específicamente para los ejes temáticos de cada facultad, actualizados según la última convocatoria.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-[#003366] text-3xl"><i class="fas fa-stopwatch"></i></div>
+                    <h3 class="font-bold text-lg uppercase tracking-tight">Simulacros de Examen</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Evaluaciones periódicas bajo condiciones reales de examen (tiempo, formato y dificultad) para medir el progreso real del estudiante.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-[#003366] text-3xl"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="font-bold text-lg uppercase tracking-tight">Seguimiento por Materia</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Desarrollo integral de los programas de estudio, cubriendo desde los conceptos básicos hasta niveles avanzados de resolución.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programas" class="py-20 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-extrabold text-[#003366] mb-12 section-title uppercase text-center md:text-left">Programas por Facultad</h2>
             
-            <div class="flex flex-wrap gap-8 border-b border-slate-200 mb-10">
-                <button onclick="openTab(event, 'una')" class="tab-btn active-tab pb-4 text-sm uppercase tracking-wider">UNA</button>
-                <button onclick="openTab(event, 'uca')" class="tab-btn pb-4 text-sm uppercase tracking-wider text-slate-400">UCA</button>
-                <button onclick="openTab(event, 'tecnicos')" class="tab-btn pb-4 text-sm uppercase tracking-wider text-slate-400">Colegios Técnicos</button>
-                <button onclick="openTab(event, 'itaipu')" class="tab-btn pb-4 text-sm uppercase tracking-wider text-slate-400">Becas Itaipú</button>
+            <div class="flex flex-wrap gap-4 md:gap-10 border-b border-slate-200 mb-10 overflow-x-auto">
+                <button onclick="openTab(event, 'una')" class="tab-btn active-tab pb-4 text-xs font-bold uppercase tracking-widest whitespace-nowrap">UNA (Ingeniería / Exactas)</button>
+                <button onclick="openTab(event, 'uca')" class="tab-btn pb-4 text-xs font-bold uppercase tracking-widest text-slate-400 whitespace-nowrap">UCA (Medicina / Ing.)</button>
+                <button onclick="openTab(event, 'tecnicos')" class="tab-btn pb-4 text-xs font-bold uppercase tracking-widest text-slate-400 whitespace-nowrap">Colegios Técnicos</button>
+                <button onclick="openTab(event, 'itaipu')" class="tab-btn pb-4 text-xs font-bold uppercase tracking-widest text-slate-400 whitespace-nowrap">Becas Itaipú</button>
             </div>
 
-            <div id="una" class="tab-content active animate-fade">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="p-6 border border-slate-200 rounded">
-                        <h3 class="font-bold text-lg mb-3">FIUNA</h3>
-                        <p class="text-sm text-slate-600">Preparación completa para el ingreso a la Facultad de Ingeniería de la UNA.</p>
+            <div id="una" class="tab-content active">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-8 border border-slate-200 rounded shadow-sm">
+                        <h4 class="font-black text-xl mb-3 text-[#003366]">FIUNA</h4>
+                        <p class="text-sm text-slate-600 mb-4">Preparación para Ingeniería UNA. Énfasis en Cálculo, Geometría Analítica y Física.</p>
+                        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter border-t pt-4">Contenido específico 2026</div>
                     </div>
-                    <div class="p-6 border border-slate-200 rounded">
-                        <h3 class="font-bold text-lg mb-3">FPUNA / FACEN</h3>
-                        <p class="text-sm text-slate-600">Preparación para Politécnica y la Facultad de Ciencias Exactas y Naturales.</p>
+                    <div class="bg-white p-8 border border-slate-200 rounded shadow-sm">
+                        <h4 class="font-black text-xl mb-3 text-[#003366]">FPUNA / FACEN</h4>
+                        <p class="text-sm text-slate-600 mb-4">Módulos para Politécnica y Ciencias Exactas. Razonamiento Lógico y Matemática.</p>
+                        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter border-t pt-4">Contenido específico 2026</div>
                     </div>
-                    <div class="p-6 border border-slate-200 rounded">
-                        <h3 class="font-bold text-lg mb-3">FCQ</h3>
-                        <p class="text-sm text-slate-600">Módulos específicos para la Facultad de Ciencias Químicas.</p>
+                    <div class="bg-white p-8 border border-slate-200 rounded shadow-sm">
+                        <h4 class="font-black text-xl mb-3 text-[#003366]">FCQ</h4>
+                        <p class="text-sm text-slate-600 mb-4">Preparación para la Facultad de Ciencias Químicas y carreras afines.</p>
+                        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter border-t pt-4">Contenido específico 2026</div>
                     </div>
                 </div>
             </div>
 
             <div id="uca" class="tab-content">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="p-6 border border-slate-200 rounded">
-                        <h3 class="font-bold text-lg mb-3">Medicina UCA</h3>
-                        <p class="text-sm text-slate-600">Programa adaptado al sistema de ingreso de la Universidad Católica.</p>
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl">
+                    <div class="bg-white p-8 border border-slate-200 rounded shadow-sm">
+                        <h4 class="font-black text-xl mb-3 text-[#003366]">Medicina UCA</h4>
+                        <p class="text-sm text-slate-600 mb-4">Programa completo para el ingreso a Medicina en la Universidad Católica.</p>
                     </div>
-                    <div class="p-6 border border-slate-200 rounded">
-                        <h3 class="font-bold text-lg mb-3">Ingeniería UCA</h3>
-                        <p class="text-sm text-slate-600">Contenidos específicos para postulantes a Ingeniería de la Católica.</p>
+                    <div class="bg-white p-8 border border-slate-200 rounded shadow-sm">
+                        <h4 class="font-black text-xl mb-3 text-[#003366]">Ingeniería UCA</h4>
+                        <p class="text-sm text-slate-600 mb-4">Preparación técnica para todas las especialidades de Ingeniería UCA.</p>
                     </div>
                 </div>
             </div>
 
             <div id="tecnicos" class="tab-content">
-                <div class="p-6 border border-slate-200 rounded">
-                    <h3 class="font-bold text-lg mb-3">CTN / IPT</h3>
-                    <p class="text-sm text-slate-600">Cursillos de nivelación e ingreso para colegios técnicos.</p>
+                <div class="bg-white p-8 border border-slate-200 rounded shadow-sm max-w-2xl">
+                    <h4 class="font-black text-xl mb-3 text-[#003366]">CTN / IPT</h4>
+                    <p class="text-sm text-slate-600 mb-4">Nivelación y preparación de ingreso para los principales colegios técnicos del país.</p>
                 </div>
             </div>
 
             <div id="itaipu" class="tab-content">
-                <div class="p-6 border border-slate-200 rounded bg-slate-50">
-                    <h3 class="font-bold text-lg mb-3">Becas Itaipú</h3>
-                    <p class="text-sm text-slate-600">Refuerzo intensivo en Matemáticas y Lengua Castellana para la convocatoria oficial.</p>
+                <div class="bg-[#003366] text-white p-10 rounded shadow-xl">
+                    <h4 class="font-black text-2xl mb-4">Becas Itaipú</h4>
+                    <p class="text-slate-200 mb-6 max-w-2xl">Refuerzo intensivo enfocado exclusivamente en los ejes de Matemáticas y Lengua Castellana de la convocatoria de Becas de Grado.</p>
+                    <a href="https://wa.me/595983376741" class="text-xs font-bold border border-white/40 px-6 py-3 rounded hover:bg-white hover:text-[#003366] transition">SOLICITAR CRONOGRAMA</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-slate-50 border-t border-slate-100">
+    <section id="sedes" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-8 text-[#003366]">SUCURSALES</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded border border-slate-200">
-                    <h4 class="font-bold mb-2">San Lorenzo</h4>
-                    <p class="text-sm text-slate-500 italic">Información de ubicación disponible vía WhatsApp.</p>
+            <h2 class="text-3xl font-extrabold text-[#003366] mb-12 section-title uppercase">Nuestras Sucursales</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div class="bg-slate-50 h-64 rounded border border-slate-200 flex items-center justify-center text-slate-400">
+                        <div class="text-center">
+                            <i class="fas fa-map-marked-alt text-4xl mb-2"></i>
+                            <p class="text-xs font-bold uppercase tracking-widest">Mapa San Lorenzo</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#003366] uppercase mb-2">San Lorenzo</h3>
+                        <p class="text-sm text-slate-500 mb-4 font-medium italic">[Insertar Dirección Aquí]</p>
+                        <a href="#" class="text-xs font-bold text-blue-600 hover:underline">VER EN GOOGLE MAPS <i class="fas fa-external-link-alt ml-1"></i></a>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded border border-slate-200">
-                    <h4 class="font-bold mb-2">Asunción</h4>
-                    <p class="text-sm text-slate-500 italic">Información de ubicación disponible vía WhatsApp.</p>
+                <div class="space-y-6">
+                    <div class="bg-slate-50 h-64 rounded border border-slate-200 flex items-center justify-center text-slate-400">
+                        <div class="text-center">
+                            <i class="fas fa-map-marked-alt text-4xl mb-2"></i>
+                            <p class="text-xs font-bold uppercase tracking-widest">Mapa Asunción</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#003366] uppercase mb-2">Asunción</h3>
+                        <p class="text-sm text-slate-500 mb-4 font-medium italic">[Insertar Dirección Aquí]</p>
+                        <a href="#" class="text-xs font-bold text-blue-600 hover:underline">VER EN GOOGLE MAPS <i class="fas fa-external-link-alt ml-1"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 border-t border-slate-100 text-center">
-        <p class="text-xs text-slate-400 font-semibold uppercase tracking-widest">Cursillo Pascal &copy; 2026</p>
+    <section class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-black text-[#003366] mb-10 text-center uppercase">Preguntas Frecuentes</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded border border-slate-200">
+                    <h4 class="font-bold text-sm mb-2">¿Cuándo inician las clases?</h4>
+                    <p class="text-sm text-slate-500">Los periodos de inicio varían según la facultad. Recomendamos consultar por WhatsApp las fechas de la convocatoria actual.</p>
+                </div>
+                <div class="bg-white p-6 rounded border border-slate-200">
+                    <h4 class="font-bold text-sm mb-2">¿Los materiales están incluidos?</h4>
+                    <p class="text-sm text-slate-500">Sí, todos los programas incluyen ejercitarios y materiales teóricos necesarios para el desarrollo de las clases.</p>
+                </div>
+                <div class="bg-white p-6 rounded border border-slate-200">
+                    <h4 class="font-bold text-sm mb-2">¿Realizan simulacros de examen?</h4>
+                    <p class="text-sm text-slate-500">Sí, de forma periódica se realizan evaluaciones bajo formato de examen real para medir el rendimiento del alumno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3 grayscale opacity-50">
+                <img src="logo.png" alt="Logo" class="h-8">
+                <span class="text-sm font-bold tracking-tighter">CURSILLO PASCAL</span>
+            </div>
+            <p class="text-[10px] text-slate-400 font-bold tracking-widest uppercase text-center">
+                © 2026 Cursillo Pascal • Información Académica • Paraguay
+            </p>
+            <div class="flex gap-6 text-slate-400">
+                <a href="#" class="hover:text-[#003366]"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#003366]"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <a href="https://wa.me/595983376741" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-105 transition z-50">
+    <a href="https://wa.me/595983376741" class="fixed bottom-8 right-8 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-all z-50">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -132,15 +215,15 @@
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
             }
             tablinks = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+                tablinks[i].classList.remove("active-tab");
                 tablinks[i].classList.add("text-slate-400");
             }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active-tab";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active-tab");
             evt.currentTarget.classList.remove("text-slate-400");
         }
     </script>
